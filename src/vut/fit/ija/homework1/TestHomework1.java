@@ -47,15 +47,20 @@ public class TestHomework1 {
         Street str1 = new MyStreet("str1", MyCoordinate.create(10, 10), MyCoordinate.create(10, 100));
         Street str2 = new MyStreet("str2", MyCoordinate.create(10, 100), MyCoordinate.create(50, 150));
         Street str3 = new MyStreet("str3", MyCoordinate.create(10, 100), MyCoordinate.create(50, 50));
-                
+        assert str1 != null;
+        assert str2 != null;
+        assert str3 != null;
         Coordinate c1 = MyCoordinate.create(10,60);
         assert c1 != null 
                 : "Lze vytvorit souradnice s kladnymi hodnotami";
         
         Stop s1 = new MyStop("s1", c1);
+        assert s1 != null;
         Coordinate c2 = MyCoordinate.create(25,75);
+        assert c2 !=null;
         Stop s2 = new MyStop("s1", c2);
-        
+        assert s2 !=null;
+
         str1.addStop(s1);
         str2.addStop(s2);
         
