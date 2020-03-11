@@ -22,6 +22,8 @@ public class MyStreetMap implements StreetMap {
         return null;
     }
 
+
+
     public void addStreet(Street s) {
         kocka.add(s);
     }

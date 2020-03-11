@@ -28,5 +28,21 @@ public class MyCoordinate implements Coordinate {
     public int getY() {
         return y;
     }
+
+    public boolean equals(Object s) { 
+        
+        MyCoordinate c = (MyCoordinate) s;
+
+         
+        if (this.x == c.x && this.y == c.y)
+            return true;
+        return false;
+      
+    } 
+
+    @Override
+    public int hashCode() {
+        return Objects.hash();
+    }
     
 }

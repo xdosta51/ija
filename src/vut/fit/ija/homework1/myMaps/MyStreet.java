@@ -12,23 +12,26 @@ public class MyStreet implements Street {
     private Coordinate c1;
     private Coordinate c2;
     List<Stop> stoper = new ArrayList<Stop>();
-    List<Coordinate> turbo = new ArrayList<Coordinate>();
+    
 
     public MyStreet(String getIde,  Coordinate c1, Coordinate c2) {
         this.getIde = getIde;
         this.c1 = c1;
         this.c2 = c2;
-        turbo.add(c2);
-        turbo.add(c1);
+        
     }
 
     public String getId() {
         return getIde;
     }
     public List<Coordinate> getCoordinates() {
-        
+        List<Coordinate> turbo = new ArrayList<Coordinate>();
+        turbo.add(this.c1);
+        turbo.add(this.c2);
         return turbo;
     }
+
+    
 
     public List<Stop> getStops() {
         return stoper;

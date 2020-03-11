@@ -5,23 +5,39 @@ import vut.fit.ija.homework1.maps.Coordinate;
 import java.util.Objects;
 
 public class MyStop implements Stop {
-    private String getId;
+    private String getIde;
     private Coordinate c1;
     private Street s1;
 
-    public MyStop(String getId,  Coordinate c1) {
-        this.getId = getId;
+    public MyStop(String getIde,  Coordinate c1) {
+        this.getIde = getIde;
         this.c1 = c1;
         
     }
-    public MyStop(String getId) {
-        this.getId = getId;
-        
-    } 
     
+    public boolean equals(Object s) { 
+        
+        MyStop c = (MyStop) s;
+
+        int pes =  this.getId().compareTo(c.getIde); 
+        if (pes == 0)
+            return true;
+        return false;
+      
+    } 
+
+    @Override
+    public int hashCode() {
+        return Objects.hash();
+    }
+    
+    public MyStop(String getIde) {
+        this.getIde = getIde;
+    
+    }     
     public String getId() {
-        if (getId != null)
-            return getId;
+        if (getIde != null)
+            return getIde;
         else 
             return null;
     }
